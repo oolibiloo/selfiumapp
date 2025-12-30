@@ -1,0 +1,5 @@
+{
+  "name": "Selfium Master App",
+  "description": "A comprehensive internet service management application for Selfium users, featuring package management, wallet recharge, WiFi security, and agent discovery.",
+  "requestFramePermissions": []
+}
