@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Page } from '../types';
+import { Page } from '../types.ts';
 import { Home, Layers, Wallet, Wifi, Store } from 'lucide-react';
 
 interface BottomNavProps {

@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react';
-import { Page } from './types';
-import Header from './components/Header';
-import BottomNav from './components/BottomNav';
-import ProfileModal from './components/ProfileModal';
-import Home from './pages/Home';
-import Packages from './pages/Packages';
-import Wallet from './pages/Wallet';
-import WiFi from './pages/WiFi';
-import Agents from './pages/Agents';
+import { Page } from './types.ts';
+import Header from './components/Header.tsx';
+import BottomNav from './components/BottomNav.tsx';
+import ProfileModal from './components/ProfileModal.tsx';
+import Home from './pages/Home.tsx';
+import Packages from './pages/Packages.tsx';
+import Wallet from './pages/Wallet.tsx';
+import WiFi from './pages/WiFi.tsx';
+import Agents from './pages/Agents.tsx';
 import { MessageCircle } from 'lucide-react';
 
 const App: React.FC = () => {
