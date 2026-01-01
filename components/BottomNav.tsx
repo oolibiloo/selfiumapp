@@ -1,20 +1,20 @@
 
 import React from 'react';
-import { Page } from '../types.ts';
 import { Home, Layers, Wallet, Wifi, Store } from 'lucide-react';
+import { Page } from '../types.ts';
 
 interface BottomNavProps {
-  activePage: Page;
-  onPageChange: (page: Page) => void;
+  currentPage: Page;
+  onNavigate: (page: Page) => void;
 }
 
-const BottomNav: React.FC<BottomNavProps> = ({ activePage, onPageChange }) => {
+const BottomNav: React.FC<BottomNavProps> = ({ currentPage, onNavigate }) => {
   const navItems = [
-    { id: Page.HOME, label: 'الرئيسية', icon: Home },
-    { id: Page.PACKAGES, label: 'الباقات', icon: Layers },
-    { id: Page.WALLET, label: 'المحفظة', icon: Wallet },
-    { id: Page.WIFI, label: 'WiFi', icon: Wifi },
-    { id: Page.AGENTS, label: 'الوكلاء', icon: Store },
+    { page: Page.HOME, label: 'الرئيسية', icon: Home },
+    { page: Page.PACKAGES, label: 'الباقات', icon: Layers },
+    { page: Page.WALLET, label: 'المحفظة', icon: Wallet },
+    { page: Page.WIFI, label: 'WiFi', icon: Wifi },
+    { page: Page.AGENTS, label: 'الوكلاء', icon: Store },
   ];
 
   return (
@@ -22,11 +22,11 @@ const BottomNav: React.FC<BottomNavProps> = ({ activePage, onPageChange }) => {
       <nav className="glass-nav h-[85px] rounded-[30px] flex justify-around items-center px-2 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-white/80">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const isActive = activePage === item.id;
+          const isActive = currentPage === item.page;
           return (
             <button
-              key={item.id}
-              onClick={() => onPageChange(item.id)}
+              key={item.page}
+              onClick={() => onNavigate(item.page)}
               className={`flex flex-col items-center justify-center gap-1.5 w-full transition-all duration-300 ${
                 isActive ? 'text-brand-blue scale-105' : 'text-slate-400'
               }`}

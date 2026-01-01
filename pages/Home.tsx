@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Page } from '../types.ts';
 import { Trophy, Wallet, Zap, ShieldCheck, ArrowRight, Activity } from 'lucide-react';
+import { Page } from '../types.ts';
 
 interface HomeProps {
   onNavigate: (page: Page) => void;
@@ -66,7 +66,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </div>
 
       {/* Promotions */}
-      <button className="w-full glass-card rounded-2xl p-5 flex items-center justify-between group active:scale-[0.98] transition-all">
+      <button 
+        onClick={() => onNavigate(Page.PACKAGES)}
+        className="w-full glass-card rounded-2xl p-5 flex items-center justify-between group active:scale-[0.98] transition-all"
+      >
         <div className="flex items-center gap-4">
           <div className="w-10 h-10 rounded-xl bg-brand-blue flex items-center justify-center text-white shadow-lg shadow-brand-blue/20">
             <ArrowRight size={20} />
