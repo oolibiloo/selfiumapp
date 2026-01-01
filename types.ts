@@ -29,3 +29,9 @@ export interface Agent {
   location: string;
   phone: string;
 }
+
+// Added ChatMessage interface to handle AI conversation history state
+export interface ChatMessage {
+  role: 'user' | 'model';
+  text: string;
+}

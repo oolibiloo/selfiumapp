@@ -36,14 +36,18 @@ const App: React.FC = () => {
           {renderPage()}
         </main>
 
-        <a 
-          href="https://wa.me/218000000000" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="absolute bottom-28 left-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-xl shadow-[#25D366]/30 hover:scale-105 transition-transform z-[150]"
-        >
-          <MessageCircle size={28} strokeWidth={2.5} />
-        </a>
+        {/* Support Buttons Container */}
+        <div className="absolute bottom-28 left-6 flex flex-col gap-3 z-[150]">
+          {/* WhatsApp Button Only */}
+          <a 
+            href="https://wa.me/218000000000" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-xl shadow-[#25D366]/30 hover:scale-105 active:scale-95 transition-all"
+          >
+            <MessageCircle size={28} strokeWidth={2.5} />
+          </a>
+        </div>
 
         <BottomNav activePage={activePage} onPageChange={setActivePage} />
 
